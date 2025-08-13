@@ -1,0 +1,24 @@
+Package: korean-ime-fixer
+Version: 1.0-1
+Architecture: all
+Maintainer: Korean IME Community <maintainer@korean-ime.org>
+Installed-Size: 15
+Depends: fcitx5, fcitx5-hangul, im-config, systemd
+Recommends: fcitx5-config-qt
+Suggests: gnome-shell-extension-kimpanel
+Section: utils
+Priority: optional
+Homepage: https://github.com/korean-ime/korean-ime-fixer
+Description: Universal Korean IME fixer for Ubuntu systems
+ This package automatically configures Fcitx5 input method framework
+ to provide stable Korean input experience across all desktop environments.
+ .
+ Features:
+  * Automatic environment detection (GNOME/KDE/XFCE, Wayland/X11)
+  * Proper environment variable configuration
+  * systemd user session integration
+  * Complete removal support
+  * Resolves Korean character input issues in browsers and applications
+ .
+ This package is specifically designed for Ubuntu and its derivatives,
+ with focus on GNOME desktop environment and Wayland sessions.

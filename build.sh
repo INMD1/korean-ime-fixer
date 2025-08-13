@@ -14,17 +14,7 @@ if ! command -v dpkg-buildpackage &> /dev/null; then
     exit 1
 fi
 
-# 패키지 디렉토리 확인
-if [ ! -d "korean-ime-fixer-1.0" ]; then
-    echo "오류: korean-ime-fixer-1.0 디렉토리를 찾을 수 없습니다."
-    exit 1
-fi
-
 # 빌드 실행
-echo "패키지 빌드 중..."
-cd korean-ime-fixer-1.0
-
-# 빌드 실행 (서명 없이)
 dpkg-buildpackage -us -uc -b
 
 cd ..
