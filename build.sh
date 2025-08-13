@@ -6,6 +6,7 @@ set -e
 
 echo "Korean IME Fixer 패키지 빌드를 시작합니다..."
 
+
 # 필요한 의존성 확인
 echo "의존성 확인 중..."
 if ! command -v dpkg-buildpackage &> /dev/null; then
@@ -13,6 +14,8 @@ if ! command -v dpkg-buildpackage &> /dev/null; then
     echo "다음 명령으로 설치하세요: sudo apt install build-essential devscripts"
     exit 1
 fi
+
+cd src/
 
 # 빌드 실행
 dpkg-buildpackage -us -uc -b

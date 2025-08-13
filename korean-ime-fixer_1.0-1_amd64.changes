@@ -1,0 +1,33 @@
+Format: 1.8
+Date: Wed, 13 Aug 2025 14:10:00 +0900
+Source: korean-ime-fixer
+Binary: korean-ime-fixer
+Built-For-Profiles: noudeb
+Architecture: all
+Version: 1.0-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Korean IME Community <maintainer@korean-ime.org>
+Changed-By: Korean IME Community <maintainer@korean-ime.org>
+Description:
+ korean-ime-fixer - Universal Korean IME fixer for Ubuntu systems
+Changes:
+ korean-ime-fixer (1.0-1) unstable; urgency=medium
+ .
+   * Initial release of Korean IME Fixer
+   * Automatic Fcitx5 configuration for Ubuntu systems
+   * GNOME Wayland session support via systemd environment.d
+   * KDE Plasma Wayland support via plasma-workspace env scripts
+   * X11 session support via profile.d scripts
+   * Integration with Ubuntu's im-config system
+   * Comprehensive Korean input support for browsers and applications
+   * Complete package removal support
+Checksums-Sha1:
+ 532df0a32ce1d1ff902f8344958290631a825dea 3844 korean-ime-fixer_1.0-1_all.deb
+ 59a84aaf7b64e6a1c941debae97d2a2c9bf8468d 6454 korean-ime-fixer_1.0-1_amd64.buildinfo
+Checksums-Sha256:
+ f2c12599164e020418efa12245fcbaee999fb337ec5c6a2ae784939079cb9fee 3844 korean-ime-fixer_1.0-1_all.deb
+ 2f079eeed46ec5ac1ead3b9f578ac722dd15c82dabd2ad9e9424b2a10806b92c 6454 korean-ime-fixer_1.0-1_amd64.buildinfo
+Files:
+ 42324c4bfffa070249295ec46da9eb76 3844 utils optional korean-ime-fixer_1.0-1_all.deb
+ 569c782b6fbc757bf40ad0f290f70cc9 6454 utils optional korean-ime-fixer_1.0-1_amd64.buildinfo
