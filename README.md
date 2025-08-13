@@ -31,6 +31,7 @@ dpkg-buildpackage -us -uc
 
 # 빌드된 패키지 설치
 cd ..
+sudo apt install fcitx5 fcitx5-hangul
 sudo dpkg -i korean-ime-fixer_1.0-1_all.deb
 ```
 
@@ -38,6 +39,7 @@ sudo dpkg -i korean-ime-fixer_1.0-1_all.deb
 
 ```bash
 # 패키지 설치
+sudo apt install fcitx5 fcitx5-hangul
 sudo dpkg -i korean-ime-fixer_1.0-1_all.deb
 
 # 의존성 해결 (필요시)
