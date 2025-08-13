@@ -1,0 +1,12 @@
+korean-ime-fixer (1.0-1) unstable; urgency=medium
+
+  * Initial release of Korean IME Fixer
+  * Automatic Fcitx5 configuration for Ubuntu systems
+  * GNOME Wayland session support via systemd environment.d
+  * KDE Plasma Wayland support via plasma-workspace env scripts
+  * X11 session support via profile.d scripts
+  * Integration with Ubuntu's im-config system
+  * Comprehensive Korean input support for browsers and applications
+  * Complete package removal support
+
+ -- Korean IME Community <maintainer@korean-ime.org>  Wed, 13 Aug 2025 14:10:00 +0900

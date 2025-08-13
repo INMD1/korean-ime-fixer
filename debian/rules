@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+# korean-ime-fixer debian/rules
+# Uses modern debhelper sequencer
+
+%:
+	dh $@
+
+# Override to skip tests (configuration-only package)
+override_dh_auto_test:
+	# No tests to run
+
+# Override to add additional documentation
+override_dh_installdocs:
+	dh_installdocs
+	echo "Korean IME Fixer installed successfully." > README.Debian
+	echo "Please reboot your system for changes to take effect." >> README.Debian
+	echo "For Flatpak/Snap apps, additional configuration may be required." >> README.Debian
+
+# Override to ensure proper cleanup
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f README.Debian

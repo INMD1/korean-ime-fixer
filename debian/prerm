@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# prerm script for korean-ime-fixer
+# Cleanly removes all Korean IME Fixer configurations
+
+set -e
+
+case "$1" in
+    remove|purge)
+        echo "Removing Korean IME Fixer configuration..."
+
+        # Reset input method configuration
+        if command -v im-config >/dev/null 2>&1; then
+            echo "Resetting input method to system default..."
+            im-config -n auto
+        fi
+
+        # Remove configuration files
+        rm -f /etc/environment.d/60-korean-ime-fixer.conf
+        rm -f /etc/profile.d/korean-ime-fixer.sh
+        rm -f /etc/xdg/plasma-workspace/env/60-korean-ime-fixer.sh
+        rm -f /etc/skel/.config/autostart/korean-ime-fixer.desktop
+
+        # Remove user autostart files
+        for user_home in /home/*; do
+            if [ -f "$user_home/.config/autostart/korean-ime-fixer.desktop" ]; then
+                rm -f "$user_home/.config/autostart/korean-ime-fixer.desktop"
+            fi
+        done
+
+        # Reload systemd
+        if command -v systemctl >/dev/null 2>&1; then
+            systemctl --global daemon-reload 2>/dev/null || true
+        fi
+
+        echo "Korean IME Fixer removed successfully."
+        echo "Please reboot your system to complete the removal process."
+    ;;
+
+    upgrade|deconfigure|failed-upgrade)
+        exit 0
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1\'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
